@@ -1,0 +1,59 @@
+.footer {
+    &__row-1 {
+        padding: 100px 0 90px 0;
+        background: #efefef;
+    }
+
+    &__row-2 {
+        padding: 40px 0 55px 0;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__column {
+        margin-right: 50px;
+    }
+
+    &__logo {
+        min-height: 50px;
+        margin-bottom: 35px;
+        & img {
+            max-width: 100%;
+            padding-top: 2px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 16px;
+        &_icon {
+        }
+        & a {
+            color: #000000;
+        }
+    }
+
+    &__social {
+        margin-top: 46px;
+        @extend .header__social;
+    }
+
+    &__name {
+        min-height: 50px;
+        max-width: 250px;
+        margin-bottom: 35px;
+        font-family: "Play";
+        font-size: 18px;
+        line-height: 21px;
+        & a {
+            color: #000000;
+        }
+    }
+
+    &__text-2 {
+        font-family: "Roboto";
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

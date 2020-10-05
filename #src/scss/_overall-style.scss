@@ -1,0 +1,71 @@
+body {
+  font-family: "PTSans";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  position: relative;
+  font-family: "Play";
+  font-size: 36px;
+  line-height: 41px;
+  text-transform: uppercase;
+  & span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: -40px;
+    width: 28px;
+    height: 28px;
+    font-weight: 700;
+    border: 1px solid rgba(238, 181, 26, 0.5);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 28px;
+      width: 100vw;
+      height: 1px;
+      opacity: 0.5;
+      background-color: #eeb51a;
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  padding: 26px 31px;
+  background: linear-gradient(101.04deg, #ffd752 1.57%, #f9a21c 100%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  &:hover {
+    outline: 1px solid #000000;
+  }
+}
+
+.btn-2 {
+  padding: 27px 35px 25px 35px;
+  color: #ffffff;
+  background-color: #77767e;
+  & span {
+    position: relative;
+    z-index: 10;
+  }
+}

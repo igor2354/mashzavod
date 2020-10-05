@@ -1,0 +1,244 @@
+.header {
+  background-color: #ffffff;
+  top: -90px;
+  transition: all 0.3s ease;
+  &.scrolled {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 84px;
+  }
+  // .header__column-1
+
+  &__column-1 {
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+  }
+
+  // .header__column-2
+
+  &__column-2 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  // .header__logo
+
+  &__logo {
+    z-index: 1000;
+    & img {
+      max-width: 100%;
+    }
+  }
+
+  // .header__select
+
+  &__select {
+    flex-grow: 1;
+    &-input {
+    }
+    &-text {
+      position: relative;
+      padding-left: 37px;
+      cursor: pointer;
+      & span {
+        border-bottom: 1px solid #000000;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0px, -50%);
+        width: 16px;
+        height: 22px;
+        background: url("../img/icon-point.svg");
+      }
+    }
+    &-menu {
+      position: absolute;
+      left: 0;
+      top: 70px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 50px;
+      background-color: #ffffff;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+    &-item {
+      flex: 0 0 110px;
+      margin-bottom: 20px;
+    }
+    &-option {
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #000000;
+      & span {
+        &:hover {
+          border-bottom: 1px solid #000000;
+        }
+      }
+    }
+  }
+
+  // .header__phone
+
+  &__phone {
+    position: relative;
+    padding-left: 36px;
+    margin-right: 62px;
+    & a {
+      color: #000000;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0px, -50%);
+      width: 21px;
+      height: 21px;
+      background: url("../img/icon-call.svg");
+    }
+  }
+
+  // .header__email
+
+  &__email {
+    position: relative;
+    padding-left: 39px;
+    margin-right: 34px;
+    & a {
+      color: #000000;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0px, -50%);
+      width: 23px;
+      height: 17px;
+      background: url("../img/icon-email.svg");
+    }
+  }
+
+  // .header__social
+
+  &__social {
+    display: flex;
+    & a {
+      margin-right: 18px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__burger {
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 30px;
+    z-index: 10000;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      top: 0;
+      left: 0;
+      background-color: #f9a21c;
+      transition: all 0.3s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      left: 0;
+      bottom: 13px;
+      background-color: #f9a21c;
+      transition: all 0.3s ease;
+    }
+    & span {
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      bottom: 0;
+      background-color: #f9a21c;
+      transition: all 0.3s ease;
+    }
+    &.active {
+      &::before {
+        top: 15px;
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: scale(0);
+      }
+      & span {
+        bottom: 13px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.select {
+  & select {
+    display: none;
+  }
+  // .select__input
+
+  &__input {
+  }
+
+  // .select__text
+
+  &__text {
+  }
+
+  // .select__menu
+
+  &__menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 200;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .select__item
+
+  &__item {
+  }
+
+  // .select__option
+
+  &__option {
+    &_selected {
+      & span {
+        border-bottom: 1px solid #000000;
+      }
+    }
+  }
+}

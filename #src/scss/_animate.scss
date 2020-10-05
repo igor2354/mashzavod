@@ -1,0 +1,177 @@
+.fadein {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 0.6s ease;
+  &.animate {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.title {
+  opacity: 0;
+  transform: translate(-300px, 0);
+  transition: all 0.5s ease;
+  &.animate {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.btn-2 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(101.04deg, #ffd752 1.57%, #f9a21c 100%);
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    color: #000000;
+    transition: all 0.3s ease;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.btn-3 {
+  position: relative;
+  & span {
+    position: relative;
+    z-index: 10;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(101.04deg, #ffd752 1.57%, #f9a21c 100%);
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    color: #ffffff;
+    transition: all 0.3s ease;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.preview {
+  &__title {
+    transition: all 0.8s ease;
+  }
+  &__subtitle {
+    transition: all 0.8s ease 0.2s;
+  }
+  &__text {
+    opacity: 0;
+    transform: translate(-300px, 0);
+    transition: all 0.5s ease 0.4s;
+    &.animate {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    &-2 {
+      transform: translate(300px, 0);
+    }
+    &-3 {
+      transform: translate(300px, 0);
+    }
+  }
+}
+
+.contact {
+  &__text-1 {
+    & span {
+      left: -300px;
+      transition: all 1s ease;
+      &.animate {
+        left: -40px;
+      }
+    }
+  }
+}
+
+.advantages {
+  &__wrap {
+    &:first-child {
+      transition: all 0.6s ease;
+    }
+    &:nth-child(2) {
+      transition: all 0.6s ease 0.2s;
+    }
+    &:nth-child(3) {
+      transition: all 0.6s ease 0.4s;
+    }
+    &:last-child {
+      transition: all 0.6s ease 0.6s;
+    }
+  }
+}
+
+.company {
+  &__arrow {
+    &:hover {
+      & img {
+        animation: animarrow 1s infinite;
+      }
+    }
+  }
+}
+
+.work {
+  &__wrap {
+    &:first-child {
+      transition: all 0.6s ease;
+    }
+    &:nth-child(2) {
+      transition: all 0.6s ease 0.2s;
+    }
+    &:nth-child(3) {
+      transition: all 0.6s ease 0.4s;
+    }
+    &:last-child {
+      transition: all 0.6s ease 0.6s;
+    }
+  }
+}
+
+.blog {
+  &__discription {
+    opacity: 0;
+    transform: translateX(-300px);
+    &:first-child {
+      transition: all 0.3s ease;
+    }
+    &:nth-child(2) {
+      transition: all 0.3s ease 0.1s;
+    }
+    &:last-child {
+      transition: all 0.3s ease 0.2s;
+    }
+    &.animate {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+@keyframes animarrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
